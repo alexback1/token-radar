@@ -1,13 +1,13 @@
 # Launch Signal — token-radar-01
 
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/alexback1/token-radar/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/alexback1/token-radar/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
 A fitted token-launch radar: 198 pre-token protocols ranked by implied value,
 each with a costed farm plan. Built for the make.fun bounty token-radar-01
 ("Build the best token launch radar", $1,325, deadline 2026-12-14 10:00 UTC).
-
-> TODO for the coordinator before submit (P-42): add the three lines of LIVE
-> make.fun badge (competition, rank, reward) at the top of this README once the
-> entry is submitted, and set the GitHub repo About homepage to the bounty page
-> with topic `makefun`. No rank exists yet, so no badge is faked here.
+See the bounty: https://make.fun/bounty/token-radar-01
 
 ## The model (radar-2)
 
@@ -61,9 +61,8 @@ Two runs write byte-identical output. `out/` holds `board.json`, `data.js`,
     screenshots/          1-board.png, 2-detail.png, 3-filtered.png
     LICENSE               MIT
 
-Screenshots on this machine were rendered with PIL from the real board data
-(no browser is installed here). Re-render them in a real browser before
-submit and replace the files.
+Screenshots were rendered in a real browser (Chrome, 1440×900) from the
+dashboard in this repository.
 
 ## Honest limits
 
