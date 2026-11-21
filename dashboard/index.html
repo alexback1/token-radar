@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch Signal — fitted token-launch radar</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#board">Skip to the board</a>
+<main id="app" aria-busy="true">
+  <header class="hero">
+    <p class="eyebrow">Token-launch radar &middot; model radar-2</p>
+    <h1>Launch Signal</h1>
+    <p class="lede">Which pre-token protocol is worth farming next — ranked by a fitted
+    value model, tested out of sample, with a costed farm plan for every row.</p>
+    <p class="asof" id="asof"></p>
+  </header>
+  <section class="kpis" id="kpis" aria-label="Board totals"></section>
+  <section class="integrity" id="integrity" aria-label="How this board was built"></section>
+  <section class="controls" aria-label="Filter and sort the board">
+    <label>Search <input id="q" type="search" placeholder="Protocol, category, chain…" autocomplete="off"></label>
+    <label>Category <select id="cat"><option value="all">All categories</option></select></label>
+    <label>Verdict <select id="verdict">
+      <option value="all">All verdicts</option><option value="FARM">FARM</option>
+      <option value="THIN">THIN</option><option value="SKIP">SKIP</option></select></label>
+    <label class="check"><input id="watch" type="checkbox"> Watchlist only</label>
+    <label>Sort <select id="sort">
+      <option value="implied">Implied value</option><option value="tvl">TVL</option>
+      <option value="growth">7-day change</option><option value="age">Age</option></select></label>
+    <p class="count" id="count"></p>
+  </section>
+  <section id="detail" class="detail" aria-label="Protocol detail"></section>
+  <section id="board" aria-label="Ranked board">
+    <table>
+      <thead><tr>
+        <th>#</th><th>Protocol</th><th>Category</th><th>Chains</th>
+        <th class="num">TVL</th><th class="num">7d</th><th class="num">Age</th>
+        <th class="num">Implied value</th><th class="num">Token odds</th><th>Verdict</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+  <section class="live" aria-label="Live token anchors">
+    <h2>Live token anchors</h2>
+    <p>Protocols whose token already trades. Their market caps are what the model was
+    fitted on — they anchor the board, they are not ranked by it.</p>
+    <table>
+      <thead><tr><th>Protocol</th><th>Category</th><th class="num">TVL</th>
+      <th class="num">Market cap</th><th class="num">Mcap / TVL</th></tr></thead>
+      <tbody id="live"></tbody>
+    </table>
+  </section>
+  <section class="method" id="method" aria-label="Method and limits"></section>
+  <footer>
+    <p>Implied value is this board&rsquo;s own claim, never a market price. A protocol
+    on this board <em>records no token</em> in DefiLlama&rsquo;s record — that is not
+    proof it has none. Farming carries risk: only farm with funds you can lose.</p>
+  </footer>
+</main>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
